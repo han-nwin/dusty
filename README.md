@@ -13,7 +13,7 @@ A CleanMyMac-style TUI for macOS. Clean up caches, logs, and build artifacts saf
 ## Installation
 
 ```bash
-go install github.com/han/dusty/cmd/dusty@latest
+go install github.com/han/dusty@latest
 ```
 
 Or build from source:
@@ -21,7 +21,7 @@ Or build from source:
 ```bash
 git clone https://github.com/han/dusty
 cd dusty
-go build -o dusty cmd/dusty/main.go
+go build -o dusty
 ```
 
 ## Usage
@@ -54,11 +54,9 @@ dusty
 
 ```
 dusty/
-├── cmd/dusty/          # Main application entry point
-├── internal/
-│   ├── scanner/        # Directory scanning and size calculation
-│   └── tui/            # Bubble Tea TUI components
-├── pkg/utils/          # Shared utilities
+├── main.go             # Application entry point
+├── scanner/            # Directory scanning and size calculation
+├── ui/                 # Bubble Tea TUI components
 ├── FEATURES.md         # Feature specifications
 └── TODOs.md           # Development roadmap
 ```
