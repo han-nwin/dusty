@@ -31,7 +31,7 @@ brew install go
 ### Using Go
 
 ```bash
-go install github.com/han-nwin/dusty@v0.1.0
+go install github.com/han-nwin/dusty@v0.1.1
 ```
 
 Make sure `$GOPATH/bin` is in your PATH:
