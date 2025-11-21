@@ -15,6 +15,17 @@ A CleanMyMac-style TUI for macOS. Clean up caches, logs, and build artifacts saf
 
 ## Installation
 
+### Prerequisites
+
+If you don't have Go installed:
+
+```bash
+# Using Homebrew (recommended)
+brew install go
+
+# Or download from https://go.dev/dl/
+```
+
 ### Using Go
 
 ```bash
