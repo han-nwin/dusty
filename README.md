@@ -2,26 +2,38 @@
 
 A CleanMyMac-style TUI for macOS. Clean up caches, logs, and build artifacts safely from your terminal.
 
+![Dusty TUI](https://img.shields.io/badge/macOS-TUI-blue)
+
 ## Features
 
 - Scan common cache directories (Xcode, npm, yarn, system caches)
-- Interactive TUI with keyboard navigation
-- Safe deletion with confirmation
-- Move files to Trash or permanent delete
-- Track cleanup history
+- Interactive TUI with Catppuccin Mocha theme
+- Expandable directories to see individual items
+- Move to Trash 🗑️ or permanently clean 💀
+- Color-coded sizes (green/yellow/red)
+- Filter and search
 
 ## Installation
+
+### Using Go
 
 ```bash
 go install github.com/han/dusty@latest
 ```
 
-Or build from source:
+Make sure `$GOPATH/bin` is in your PATH:
+
+```bash
+export PATH=$PATH:$(go env GOPATH)/bin
+```
+
+### Build from source
 
 ```bash
 git clone https://github.com/han/dusty
 cd dusty
 go build -o dusty
+./dusty
 ```
 
 ## Usage
@@ -32,41 +44,46 @@ dusty
 
 ### Keyboard Shortcuts
 
-- `↑↓` - Navigate
-- `Space` - Toggle selection
-- `Enter` - View details
-- `C` - Clean selected
-- `R` - Rescan
-- `/` - Filter
-- `?` - Help
-- `Q` - Quit
+| Key | Action |
+|-----|--------|
+| `↑↓` / `jk` | Navigate |
+| `Space` | Toggle selection |
+| `Enter` / `l` | Expand/collapse directory |
+| `a` | Select all |
+| `A` | Deselect all |
+| `t` | 🗑️ Move to Trash |
+| `c` | 💀 Clean (permanent delete) |
+| `r` | 🔄 Rescan |
+| `/` | 🔍 Filter |
+| `?` | ❓ Help |
+| `q` | 👋 Quit |
 
 ## What Gets Cleaned
 
-- `~/Library/Caches/**` - System and app caches
-- `~/Library/Logs/**` - Log files
+- `~/Library/Caches` - System and app caches
+- `~/Library/Logs` - Log files
 - `~/Library/Developer/Xcode/DerivedData` - Xcode build artifacts
+- `~/Library/Developer/Xcode/Archives` - Xcode archives
 - `~/.npm/_cacache` - npm cache
 - `~/.cache/yarn` - Yarn cache
 - `~/Library/Caches/pip` - Python pip cache
-
-## Directory Structure
-
-```
-dusty/
-├── main.go             # Application entry point
-├── scanner/            # Directory scanning and size calculation
-├── ui/                 # Bubble Tea TUI components
-├── FEATURES.md         # Feature specifications
-└── TODOs.md           # Development roadmap
-```
+- `~/Library/Caches/Homebrew` - Homebrew cache
+- `~/.gradle/caches` - Gradle cache
+- `~/.cargo/registry` - Cargo registry
+- Chrome and Safari caches
 
 ## Safety
 
 - Only scans allowlisted paths
 - Never requires sudo
-- Confirmation before deletion
-- Saves cleanup manifest to `~/.dusty/undo/`
+- Confirmation before any deletion
+- Clear warnings for permanent deletion
+- Trash option keeps files recoverable
+
+## Requirements
+
+- macOS
+- Go 1.21+ (for installation)
 
 ## License
 
