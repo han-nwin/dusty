@@ -4,6 +4,8 @@ A CleanMyMac-style TUI for macOS. Clean up caches, logs, and build artifacts saf
 
 ![Dusty TUI](https://img.shields.io/badge/macOS-TUI-blue)
 
+![Screenshot](screenshots/screenshot1.png)
+
 ## Features
 
 - Scan common cache directories (Xcode, npm, yarn, system caches)
@@ -55,19 +57,19 @@ dusty
 
 ### Keyboard Shortcuts
 
-| Key | Action |
-|-----|--------|
-| `↑↓` / `jk` | Navigate |
-| `Space` | Toggle selection |
-| `Enter` / `l` | Expand/collapse directory |
-| `a` | Select all |
-| `A` | Deselect all |
-| `t` | 🗑️ Move to Trash |
-| `c` | 💀 Clean (permanent delete) |
-| `r` | 🔄 Rescan |
-| `/` | 🔍 Filter |
-| `?` | ❓ Help |
-| `q` | 👋 Quit |
+| Key           | Action                      |
+| ------------- | --------------------------- |
+| `↑↓` / `jk`   | Navigate                    |
+| `Space`       | Toggle selection            |
+| `Enter` / `l` | Expand/collapse directory   |
+| `a`           | Select all                  |
+| `A`           | Deselect all                |
+| `t`           | 🗑️ Move to Trash            |
+| `c`           | 💀 Clean (permanent delete) |
+| `r`           | 🔄 Rescan                   |
+| `/`           | 🔍 Filter                   |
+| `?`           | ❓ Help                     |
+| `q`           | 👋 Quit                     |
 
 ## What Gets Cleaned
 
