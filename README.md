@@ -43,7 +43,7 @@ export PATH=$PATH:$(go env GOPATH)/bin
 ### Build from source
 
 ```bash
-git clone https://github.com/han/dusty
+git clone https://github.com/han-nwin/dusty
 cd dusty
 go build -o dusty
 ./dusty
