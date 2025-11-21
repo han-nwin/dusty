@@ -1,4 +1,4 @@
-module github.com/han/dusty
+module github.com/han-nwin/dusty
 
 go 1.25.4
 

@@ -5,7 +5,7 @@ import (
 	"os"
 
 	tea "github.com/charmbracelet/bubbletea"
-	"github.com/han/dusty/ui"
+	"github.com/han-nwin/dusty/ui"
 )
 
 func main() {

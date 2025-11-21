@@ -11,7 +11,7 @@ import (
 	"github.com/charmbracelet/bubbles/textinput"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
-	"github.com/han/dusty/scanner"
+	"github.com/han-nwin/dusty/scanner"
 )
 
 // Catppuccin Mocha colors
